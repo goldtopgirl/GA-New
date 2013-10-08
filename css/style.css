@@ -1,0 +1,226 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    background-image: url('../imgs/mooning.png');
+  /* the following is the code to have the image display as a full page */
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header object {
+  width : 120px;
+  display: block;
+  margin: 20px auto;
+}
+
+nav {
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+nav a {
+  padding: 10px 0;
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  border-top: 1px solid #cccccc;
+}
+  
+nav a:hover, .here{
+  background: #999999;
+  color: white;
+}
+
+nav a:first-child{
+  border-top: none;
+}
+
+.row {
+  overflow: hidden;
+}
+
+.span-one-third {
+  display: inline;
+  float: left;
+  margin: 4px;
+}
+
+h2 {
+  font-size: 200%;
+  margin: 20px 0;
+}
+
+.box a { 
+  width: 100%;
+  display: block;
+}
+/*why doesn't this work?*/
+
+
+.box {
+  width: 290px;
+  height: 290px;
+  margin-top: 22px;
+  display: inline-block;
+  background-color: white;
+}
+
+
+.fade {
+  opacity: 0.6;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.box:hover {
+  opacity: 1;
+}
+
+.bgimg1 {
+
+  background: url('../imgs/fossils.jpg');
+  background-position:center;
+}
+
+/******************************************
+/* 480px and up - Tablet
+/*******************************************/
+
+@media only screen and (min-width: 480px){
+
+
+  header {
+    width: 23%; 
+    float: right;
+  }
+
+  header object {
+  width: 100%;
+  }
+
+  nav {
+    width: 73%;
+    float: left;
+    margin-top: 25px;
+  }
+
+  .box {
+  width: 440px;
+  height: 440px;
+  display: inline-block;
+  }
+
+}
+
+/******************************************
+/* 768px and up - Desktop
+/*******************************************/
+
+@media only screen and (min-width: 768px){
+
+   nav a:first-child { /*supported by IE7 but last-child isn't*/
+    border-left: none;
+  }
+  
+  nav {
+    width: 31.5%;
+    float: left;
+    margin-top: 25px;
+  }
+
+  .box {
+  width: 31%;
+  height:300px;
+  margin: 20px 1.2% 0;
+  display: inline-block;
+  }
+
+  .span-one-third {
+    width:31.5%;
+    margin: 0 1.2%; 
+  }
+
+  .alpha {
+  margin-left: 0;
+  }
+
+  .omega {
+    margin-right: 0;
+  }
+
+}
+
+/******************************************
+/* 991px and up - widescreen
+/*******************************************/
+
+@media only screen and (min-width: 990px){
+
+  body {
+    max-width: 1000px;
+  }
+
+  nav {
+    font-size: 1.4em;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
