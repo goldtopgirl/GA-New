@@ -1,4 +1,4 @@
 GA-New
 ======
 
-Files for General Assembly projects
+Files for General Assembly mid-term proj
